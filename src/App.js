@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
-import InputForm from "./components/InputForm";
+import Form from "./components/Form";
+import Style from "./components/Style";
 import Wallet from "./components/Wallet";
 
 class App extends React.Component {
@@ -11,11 +12,13 @@ class App extends React.Component {
       name: "",
       blockchain: "",
       address: "",
+      style: "",
     };
 
     this.updateName = this.updateName.bind(this);
     this.updateBlockchain = this.updateBlockchain.bind(this);
     this.updateAddress = this.updateAddress.bind(this);
+    this.updateStyle = this.updateStyle.bind(this);
   }
 
   updateName(value) {
@@ -36,18 +39,24 @@ class App extends React.Component {
     });
   }
 
+  updateStyle(value) {
+    this.setState({ style: value });
+  }
+
   render() {
     return (
       <div>
-        <InputForm
+        <Form
           updateName={this.updateName}
           updateBlockchain={this.updateBlockchain}
           updateAddress={this.updateAddress}
         />
+        <Style updateStyle={this.updateStyle} />
         <Wallet
           name={this.state.name}
           blockchain={this.state.blockchain}
           address={this.state.address}
+          style={this.state.style}
         />
       </div>
     );
