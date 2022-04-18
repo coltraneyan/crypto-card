@@ -1,39 +1,6 @@
 import React from "react";
-import Wallet from "./Wallet";
 
 class InputForm extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      name: "",
-      blockchain: "",
-      address: "",
-    };
-
-    this.updateName = this.updateName.bind(this);
-    this.updateBlockchain = this.updateBlockchain.bind(this);
-    this.updateAddress = this.updateAddress.bind(this);
-  }
-
-  updateName(value) {
-    this.setState({
-      name: value,
-    });
-  }
-
-  updateBlockchain(value) {
-    this.setState({
-      blockchain: value,
-    });
-  }
-
-  updateAddress(value) {
-    this.setState({
-      address: value,
-    });
-  }
-
   render() {
     return (
       <div>
@@ -41,11 +8,13 @@ class InputForm extends React.Component {
           <input
             type="text"
             placeholder="Wallet Name"
-            onChange={(event) => this.updateName(event.target.value)}
+            onChange={(event) => this.props.updateName(event.target.value)}
           />
           <select
             name="Blockchain"
-            onChange={(event) => this.updateBlockchain(event.target.value)}
+            onChange={(event) =>
+              this.props.updateBlockchain(event.target.value)
+            }
           >
             <option value="empty"></option>
             <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>
@@ -55,14 +24,9 @@ class InputForm extends React.Component {
           <input
             type="text"
             placeholder="Public Address"
-            onChange={(event) => this.updateAddress(event.target.value)}
+            onChange={(event) => this.props.updateAddress(event.target.value)}
           />
         </form>
-        <Wallet
-          name={this.state.name}
-          blockchain={this.state.blockchain}
-          address={this.state.address}
-        />
       </div>
     );
   }

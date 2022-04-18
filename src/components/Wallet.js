@@ -18,7 +18,7 @@ class Wallet extends React.Component {
       );
     } else {
       return (
-        <div className={this.props.style}>
+        <div className={`card-basic ${this.props.style}`}>
           <div>{this.props.name}</div>
           <div>{this.props.blockchain}</div>
           <div>{this.props.address}</div>
