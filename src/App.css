@@ -1,12 +1,55 @@
+/*App Styling*/
+.app-container {
+  display: flex;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: lightskyblue;
+  height: 100vh;
+}
+
+.wallet-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  height: 100vh;
+  flex: 1;
+}
+
+/*Inputs Styling*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form > input {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+}
+/* Card Styling */
+
 .card-basic {
   height: 220px;
   width: 400px;
   border-radius: 20px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-bottom {
   display: flex;
   justify-content: space-between;
-  margin: 50px;
+}
+
+.card-address {
 }

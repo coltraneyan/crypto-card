@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import Logo from "./components/Logo";
 import Form from "./components/Form";
 import Style from "./components/Style";
 import Wallet from "./components/Wallet";
@@ -45,19 +46,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Form
-          updateName={this.updateName}
-          updateBlockchain={this.updateBlockchain}
-          updateAddress={this.updateAddress}
-        />
-        <Style updateStyle={this.updateStyle} />
-        <Wallet
-          name={this.state.name}
-          blockchain={this.state.blockchain}
-          address={this.state.address}
-          style={this.state.style}
-        />
+      <div className="app-container">
+        <div className="inputs-wrapper">
+          <Logo />
+          <Form
+            updateName={this.updateName}
+            updateBlockchain={this.updateBlockchain}
+            updateAddress={this.updateAddress}
+          />
+          <Style updateStyle={this.updateStyle} />
+        </div>
+        <div className="wallet-wrapper">
+          <Wallet
+            name={this.state.name}
+            blockchain={this.state.blockchain}
+            address={this.state.address}
+            style={this.state.style}
+          />
+        </div>
       </div>
     );
   }

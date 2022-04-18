@@ -10,22 +10,26 @@ class Form extends React.Component {
             placeholder="Wallet Name"
             onChange={(event) => this.props.updateName(event.target.value)}
           />
-          <select
-            name="Blockchain"
+          <div>
+            Ex: Coltrane's Ether [Do not include any private information]
+          </div>
+          <input
+            type="text"
+            placeholder="Blockchain"
             onChange={(event) =>
               this.props.updateBlockchain(event.target.value)
             }
-          >
-            <option value="empty"></option>
-            <option value="Bitcoin (BTC)">Bitcoin (BTC)</option>
-            <option value="Ethereum (ETH)">Ethereum (ETH)</option>
-            <option value="Binance (BNB)">Binance (BNB)</option>
-          </select>
+          />
+          <div>Ex: Ethereum (ERC-20)</div>
           <input
             type="text"
             placeholder="Public Address"
             onChange={(event) => this.props.updateAddress(event.target.value)}
           />
+          <div>
+            Ex: 0xb794f5ea0ba39494ce839613fffba74279579268 [Never give out your
+            private key or seed phrase!]
+          </div>
         </form>
       </div>
     );
