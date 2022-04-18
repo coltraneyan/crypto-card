@@ -59,7 +59,6 @@ class InputForm extends React.Component {
           />
         </form>
         <Wallet
-          style={"page"}
           name={this.state.name}
           blockchain={this.state.blockchain}
           address={this.state.address}

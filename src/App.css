@@ -1,7 +1,6 @@
-.page {
-  margin: auto;
-  padding: 100px;
-  height: 120vh;
-  width: 60vw;
+.card-basic {
+  height: 220px;
+  width: 400px;
+  border-radius: 20px;
   border: 1px solid black;
 }
