@@ -8,7 +8,6 @@ class App extends React.Component {
     return (
       <div>
         <InputForm />
-        <Wallet style={"page"} />
       </div>
     );
   }
