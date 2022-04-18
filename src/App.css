@@ -1,0 +1,7 @@
+.page {
+  margin: auto;
+  padding: 100px;
+  height: 120vh;
+  width: 60vw;
+  border: 1px solid black;
+}
