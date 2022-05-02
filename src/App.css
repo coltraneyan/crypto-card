@@ -1,41 +1,56 @@
-/*App Styling*/
-.app-container {
+@font-face {
+  font-family: "Druk Wide";
+  src: url("./fonts/7e389c5e310dc537b083e0e25ea6eab5.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrains Mono";
+  src: url("./fonts/JetBrainsMono[wght].ttf") format("truetype");
+}
+
+/* Compositional Elements */
+.flex-row {
   display: flex;
 }
 
-.inputs-wrapper {
+.flex-column {
   display: flex;
   flex-direction: column;
-  padding-top: 150px;
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: lightskyblue;
+}
+
+.disperse {
+  justify-content: space-between;
+}
+
+.fill-height {
   height: 100vh;
 }
 
-.wallet-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 150px;
-  height: 100vh;
-  flex: 1;
+/* Utility Elements */
+
+.bg-primary {
+  background-image: url(./light-blue-bg.png);
+  background-size: cover;
 }
 
-/*Inputs Styling*/
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.bg-dark {
+  background-color: black;
+  color: white;
 }
 
-form > input {
-  padding: 10px;
-  border-radius: 25px;
-  border: none;
+.mono-font {
+  font-family: "Jetbrains Mono";
 }
-/* Card Styling */
+
+.wide-font {
+  font-family: "Druk Wide";
+}
+
+/* Block Elements */
+
+.mono {
+  font-family: "Jetbrains Mono";
+}
 
 .card-basic {
   height: 220px;
@@ -46,10 +61,30 @@ form > input {
   flex-direction: column;
 }
 
+.card-top {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 .card-bottom {
   display: flex;
   justify-content: space-between;
+  margin: 20px;
+  align-items: center;
 }
 
 .card-address {
+  height: auto;
+  width: 100px;
+  word-wrap: break-word;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
 }
+
+.card-QR {
+  height: 50px;
+}
+
+/* Application Specific Elements */

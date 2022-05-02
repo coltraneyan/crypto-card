@@ -6,12 +6,14 @@ class Wallet extends React.Component {
     if (this.props.address) {
       return (
         <div className={`card-basic ${this.props.style}`}>
-          <div>{this.props.name}</div>
-          <div>{this.props.blockchain}</div>
+          <div className="card-top">
+            <div>{this.props.name}</div>
+            <div>{this.props.blockchain}</div>
+          </div>
           <div className="card-bottom">
             <div className="card-address">{this.props.address}</div>
             <div className="card-QR">
-              <QRCodeSVG value={this.props.address} />
+              <QRCodeSVG value={this.props.address} size={70} />
             </div>
           </div>
         </div>

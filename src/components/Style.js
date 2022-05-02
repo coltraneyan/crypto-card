@@ -8,13 +8,13 @@ class Style extends React.Component {
           this.props.updateStyle(event.target.value);
         }}
       >
-        <input type="radio" value="Mono" name="style" />
+        <input type="radio" value="mono" name="style" />
         Mono
-        <input type="radio" value="Neomorphic" name="style" />
+        <input type="radio" value="neomorphic" name="style" />
         Neomorphic
-        <input type="radio" value="Gradient" name="style" />
+        <input type="radio" value="gradient" name="style" />
         Gradient
-        <input type="radio" value="Holo" name="style" />
+        <input type="radio" value="holo" name="style" />
         Holo
       </div>
     );
