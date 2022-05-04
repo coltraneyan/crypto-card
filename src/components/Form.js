@@ -3,7 +3,7 @@ import React from "react";
 class Form extends React.Component {
   render() {
     return (
-      <div className="mono-font remove-styling margin-2 no-select">
+      <div className="mono-font remove-styling pad-2 no-select">
         <form className="flow" spellcheck="false">
           <div className="border-round-s responsive-size pad-05 info-input">
             <input
@@ -15,7 +15,7 @@ class Form extends React.Component {
           <div className="info-card pad-05 font-size-s">
             Ex: Coltrane's Ether
             <br />
-            [Do not include any private information]
+            (Do not include any private information)
           </div>
           <div className="border-round-s responsive-size pad-05 info-input">
             <input
@@ -39,7 +39,7 @@ class Form extends React.Component {
           <div className="info-card pad-05 font-size-s">
             Ex: 0xb794f5ea0ba39494ce839613fffba74279579268
             <br />
-            Never give out your private key or seed phrase
+            (Never give out your private key or seed phrase)
           </div>
         </form>
       </div>

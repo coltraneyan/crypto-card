@@ -15,8 +15,9 @@
 
 :root {
   --lightblue: rgb(91, 91, 255);
-  --lightgrey: rgb(241, 241, 241);
-  --lightred: rgb(255, 221, 229);
+  --lightgrey: rgb(48, 48, 48);
+  --darkgrey: rgb(36, 36, 36);
+  --lightred: white;
 }
 
 /* Compositional Elements */
@@ -60,6 +61,9 @@
 .fill-width {
   flex-grow: 1;
 }
+.pad-1 {
+  padding: 1rem;
+}
 
 .pad-2 {
   padding: 2rem;
@@ -95,7 +99,11 @@
 }
 
 .bg-dark {
-  background-color: rgb(151, 151, 151);
+  background-color: var(--lightgrey);
+}
+
+.bg-dark-grey {
+  background-color: var(--darkgrey);
 }
 
 .bg-white {
@@ -159,6 +167,9 @@
   border-color: var(--lightred);
 }
 
+.border-thick {
+  border: 2px solid;
+}
 /* utility tokens */
 
 .remove-styling input {
@@ -183,11 +194,13 @@
 
 .mono {
   font-family: "Jetbrains Mono";
+  background-color: whitesmoke;
 }
 
 .holo {
   background-image: url(./images/vackground-uAvq7gFQecc-unsplash.jpeg);
   background-size: cover;
+  color: white;
 }
 
 .card-basic {
@@ -196,17 +209,12 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-}
-
-.card-top {
-  margin-top: 20px;
-  margin-left: 20px;
+  box-shadow: 0 0 2px 5px var(--lightblue);
 }
 
 .card-bottom {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
   align-items: center;
 }
 
@@ -247,8 +255,9 @@
 }
 
 .info-card {
-  border-left: 3px solid var(--lightblue);
-  background: linear-gradient(to right, var(--lightgrey), white);
+  border-left: 5px solid var(--lightred);
+  border-bottom: 1px solid var(--lightred);
+  color: white;
 }
 
 .style-active {

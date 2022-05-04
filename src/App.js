@@ -49,7 +49,7 @@ class App extends React.Component {
       <div className="flex-column">
         <Header />
         <div className="flex-row">
-          <div className="flex-column fill-height">
+          <div className="bg-dark-grey flex-column fill-height">
             <Form
               updateName={this.updateName}
               updateBlockchain={this.updateBlockchain}
