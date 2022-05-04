@@ -13,7 +13,7 @@ class App extends React.Component {
       name: "",
       blockchain: "",
       address: "",
-      style: "",
+      style: "mono",
     };
 
     this.updateName = this.updateName.bind(this);
@@ -57,7 +57,7 @@ class App extends React.Component {
             />
             <Style updateStyle={this.updateStyle} />
           </div>
-          <div className="wallet-wrapper">
+          <div className="bg-dark fill-width">
             <Wallet
               name={this.state.name}
               blockchain={this.state.blockchain}

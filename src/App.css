@@ -8,9 +8,25 @@
   src: url("./fonts/JetBrainsMono[wght].ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "GT America";
+  src: url("./fonts/GT-America-Standard-Regular-Trial.woff2") format("woff2");
+}
+
+:root {
+  --lightblue: rgb(91, 91, 255);
+  --lightgrey: rgb(241, 241, 241);
+  --lightred: rgb(255, 221, 229);
+}
+
 /* Compositional Elements */
 .flex-row {
   display: flex;
+}
+
+.flex-row-align {
+  display: flex;
+  align-items: center;
 }
 
 .flex-column {
@@ -18,32 +34,149 @@
   flex-direction: column;
 }
 
+.flex-column-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .disperse {
   justify-content: space-between;
+}
+
+.div-center-h {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gap-05 {
+  gap: 0.5rem;
 }
 
 .fill-height {
   height: 100vh;
 }
 
+.fill-width {
+  flex-grow: 1;
+}
+
+.pad-2 {
+  padding: 2rem;
+}
+
+.pad-05 {
+  padding: 0.5rem;
+}
+
+.pad-025 {
+  padding: 0.25rem;
+}
+
+.margin-2 {
+  margin: 2rem;
+}
+
+.margin-top-2 {
+  margin-top: 7rem;
+}
+
+.flow > * + * {
+  margin-top: 1rem;
+}
+
 /* Utility Elements */
 
-.bg-primary {
-  background-image: url(./light-blue-bg.png);
-  background-size: cover;
+/* background tokens */
+
+.bg-block-primary {
+  background-color: var(--lightblue);
+  color: white;
 }
 
 .bg-dark {
-  background-color: black;
-  color: white;
+  background-color: rgb(151, 151, 151);
 }
+
+.bg-white {
+  background-color: white;
+}
+
+/* text tokens */
 
 .mono-font {
   font-family: "Jetbrains Mono";
 }
 
+.mono-font input::placeholder {
+  font-family: "Jetbrains Mono";
+}
 .wide-font {
   font-family: "Druk Wide";
+}
+
+.standard-font {
+  font-family: "GT America";
+}
+
+.font-size-s {
+  font-size: small;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-color-tertiary {
+  color: var(--lightred);
+}
+
+/* border tokens */
+
+.box {
+  border: 1px solid;
+}
+
+.border-round-s {
+  border-radius: 3rem;
+  border: 1px solid;
+}
+
+.border-round-xs {
+  border-radius: 0.5rem;
+  border: 1px solid;
+}
+
+.border-color-augment {
+  border-color: var(--lightblue);
+}
+
+.border-color-tertiary {
+  border-color: var(--lightred);
+}
+
+/* utility tokens */
+
+.remove-styling input {
+  border-style: none;
+  outline-style: none;
+}
+
+.responsive-size {
+  max-width: max-content;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Block Elements */
@@ -52,11 +185,15 @@
   font-family: "Jetbrains Mono";
 }
 
+.holo {
+  background-image: url(./images/vackground-uAvq7gFQecc-unsplash.jpeg);
+  background-size: cover;
+}
+
 .card-basic {
-  height: 220px;
-  width: 400px;
+  height: 14rem;
+  width: 23rem;
   border-radius: 20px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -85,6 +222,38 @@
 
 .card-QR {
   height: 50px;
+}
+
+/**/
+
+.info-input {
+  border: 2px solid var(--lightblue);
+  background-color: var(--lightblue);
+}
+
+.info-input input,
+.info-input input::placeholder {
+  background-color: var(--lightblue);
+  text-align: center;
+  font-family: "Druk Wide";
+  color: white;
+}
+
+.info-input input:focus,
+.info-input input:focus::placeholder,
+.info-input:focus-within {
+  color: var(--lightblue);
+  background-color: white;
+}
+
+.info-card {
+  border-left: 3px solid var(--lightblue);
+  background: linear-gradient(to right, var(--lightgrey), white);
+}
+
+.style-active {
+  background-color: white;
+  color: var(--lightblue);
 }
 
 /* Application Specific Elements */

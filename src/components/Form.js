@@ -3,32 +3,43 @@ import React from "react";
 class Form extends React.Component {
   render() {
     return (
-      <div>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Wallet Name"
-            onChange={(event) => this.props.updateName(event.target.value)}
-          />
-          <div>
-            Ex: Coltrane's Ether [Do not include any private information]
+      <div className="mono-font remove-styling margin-2 no-select">
+        <form className="flow" spellcheck="false">
+          <div className="border-round-s responsive-size pad-05 info-input">
+            <input
+              type="text"
+              placeholder="Wallet Name"
+              onChange={(event) => this.props.updateName(event.target.value)}
+            />
           </div>
-          <input
-            type="text"
-            placeholder="Blockchain"
-            onChange={(event) =>
-              this.props.updateBlockchain(event.target.value)
-            }
-          />
-          <div>Ex: Ethereum (ERC-20)</div>
-          <input
-            type="text"
-            placeholder="Public Address"
-            onChange={(event) => this.props.updateAddress(event.target.value)}
-          />
-          <div>
-            Ex: 0xb794f5ea0ba39494ce839613fffba74279579268 [Never give out your
-            private key or seed phrase!]
+          <div className="info-card pad-05 font-size-s">
+            Ex: Coltrane's Ether
+            <br />
+            [Do not include any private information]
+          </div>
+          <div className="border-round-s responsive-size pad-05 info-input">
+            <input
+              type="text"
+              placeholder="Blockchain"
+              onChange={(event) =>
+                this.props.updateBlockchain(event.target.value)
+              }
+            />
+          </div>
+          <div className="info-card pad-05 font-size-s">
+            Ex: Ethereum (ERC-20)
+          </div>
+          <div className="border-round-s responsive-size pad-05 info-input">
+            <input
+              type="text"
+              placeholder="Public Address"
+              onChange={(event) => this.props.updateAddress(event.target.value)}
+            />
+          </div>
+          <div className="info-card pad-05 font-size-s">
+            Ex: 0xb794f5ea0ba39494ce839613fffba74279579268
+            <br />
+            Never give out your private key or seed phrase
           </div>
         </form>
       </div>

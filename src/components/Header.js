@@ -3,25 +3,18 @@ import React from "react";
 class Header extends React.Component {
   render() {
     return (
-      <div className="flex-row disperse | bg-primary wide-font">
-        <div className="flex-row">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <ellipse
-                cx="10"
-                cy="20"
-                rx="10"
-                ry="20"
-                fillOpacity="0"
-                stroke="blue"
-              />
-            </svg>
-          </div>
+      <div className="flex-row-align disperse pad-2 | wide-font bg-block-primary">
+        <div className="flex-row-align gap-05">
           <div>Portal</div>
+          <div className="mono-font font-size-s font-color-tertiary border-round-xs border-color-tertiary pad-025">
+            wallet
+          </div>
         </div>
-        <div className="flex-row">
+        <div className="flex-row-align gap-05">
           <div>About</div>
-          <div>Save</div>
+          <div className="box pad-05">
+            <u>Save</u>
+          </div>
         </div>
       </div>
     );

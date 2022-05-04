@@ -1,21 +1,69 @@
 import React from "react";
 
 class Style extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      active: "mono",
+    };
+
+    this.handleActive = this.handleActive.bind(this);
+  }
+
+  handleActive(value) {
+    this.setState({ active: value });
+  }
+
   render() {
     return (
       <div
-        onChange={(event) => {
-          this.props.updateStyle(event.target.value);
-        }}
+        className="flex-row-align wide-font font-size-s gap-05 pad-05 margin-2 border-round-xs
+        border-color-augment responsive-size bg-block-primary no-select"
       >
-        <input type="radio" value="mono" name="style" />
-        Mono
-        <input type="radio" value="neomorphic" name="style" />
-        Neomorphic
-        <input type="radio" value="gradient" name="style" />
-        Gradient
-        <input type="radio" value="holo" name="style" />
-        Holo
+        <div
+          onClick={() => {
+            this.props.updateStyle("mono");
+            this.handleActive("mono");
+          }}
+          className={`border-round-xs pad-05 border-color-augment ${
+            this.state.active === "mono" ? "style-active" : ""
+          }`}
+        >
+          Mono
+        </div>
+        <div
+          onClick={() => {
+            this.props.updateStyle("neomorphic");
+            this.handleActive("neomorphic");
+          }}
+          className={`border-round-xs pad-05 border-color-augment ${
+            this.state.active === "neomorphic" ? "style-active" : ""
+          }`}
+        >
+          Neomorphic
+        </div>
+        <div
+          onClick={() => {
+            this.props.updateStyle("gradient");
+            this.handleActive("gradient");
+          }}
+          className={`border-round-xs pad-05 border-color-augment ${
+            this.state.active === "gradient" ? "style-active" : ""
+          }`}
+        >
+          Gradient
+        </div>
+        <div
+          onClick={() => {
+            this.props.updateStyle("holo");
+            this.handleActive("holo");
+          }}
+          className={`border-round-xs pad-05 border-color-augment ${
+            this.state.active === "holo" ? "style-active" : ""
+          }`}
+        >
+          Holo
+        </div>
       </div>
     );
   }
