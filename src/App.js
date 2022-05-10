@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { createRef } from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import Style from "./components/Style";
@@ -8,7 +8,7 @@ import Wallet from "./components/Wallet";
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    const walletRef = createRef();
     this.state = {
       name: "",
       blockchain: "",

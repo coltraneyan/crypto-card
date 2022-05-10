@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
+import { exportComponentAsJPEG } from "react-component-export-image";
 
-class Wallet extends React.Component {
-  render() {
-    if (this.props.address) {
-      return (
+const Wallet = (props) => {
+  const walletRef = useRef();
+
+  if (props.address) {
+    return (
+      <div className="flex-column-align">
         <div
-          className={`card-basic div-center-h margin-top-2 ${this.props.style}`}
+          ref={walletRef}
+          className={`card-basic div-center-h margin-top-2 ${props.style}`}
         >
           <div className="card-top flex-row-align disperse">
             <div className="flex-column card-info">
-              <div>{this.props.name}</div>
-              <div>{this.props.blockchain}</div>
+              <div>{props.name}</div>
+              <div>{props.blockchain}</div>
             </div>
             <div className="flex-column-align wide-font card-logo">
               <div>Portal</div>
@@ -21,25 +25,29 @@ class Wallet extends React.Component {
             </div>
           </div>
           <div className="card-bottom">
-            <div className="card-address">{this.props.address}</div>
+            <div className="card-address">{props.address}</div>
             <div className="card-QR-wrapper">
-              <QRCodeSVG
-                className="card-QR"
-                value={this.props.address}
-                size={60}
-              />
+              <QRCodeSVG className="card-QR" value={props.address} size={60} />
             </div>
           </div>
         </div>
-      );
-    } else {
-      return (
+        <div
+          className="margin-top-2 border-round-s responsive-size pad-05 info-input"
+          onClick={() => exportComponentAsJPEG(walletRef)}
+        >
+          SAVE
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
         <div className="div-center-h margin-top-2 pad-2 border-color-augment bg-dark-grey border-round-s responsive-size mono-font-bold font-color-white">
           <div>Enter a public key in order to generate your Portal Wallet.</div>
         </div>
-      );
-    }
+      </div>
+    );
   }
-}
+};
 
 export default Wallet;

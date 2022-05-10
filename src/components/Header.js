@@ -1,4 +1,5 @@
 import React from "react";
+import { exportComponentAsJPEG } from "react-component-export-image";
 
 class Header extends React.Component {
   render() {
@@ -10,12 +11,7 @@ class Header extends React.Component {
             wallet
           </div>
         </div>
-        <div className="flex-row-align gap-05">
-          <div>About</div>
-          <div className="box pad-05">
-            <u>Save</u>
-          </div>
-        </div>
+        <div>About</div>
       </div>
     );
   }
