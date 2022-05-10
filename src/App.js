@@ -55,7 +55,7 @@ class App extends React.Component {
               updateBlockchain={this.updateBlockchain}
               updateAddress={this.updateAddress}
             />
-            <Style updateStyle={this.updateStyle} />
+            <Style updateStyle={this.updateStyle} style={this.state.style} />
           </div>
           <div className="bg-dark fill-width">
             <Wallet
