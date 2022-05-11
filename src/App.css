@@ -191,6 +191,11 @@
   outline-style: none;
 }
 
+.remove-styling button {
+  border-style: none;
+  outline-style: none;
+}
+
 .responsive-size {
   max-width: max-content;
 }
@@ -205,6 +210,17 @@
 }
 
 /* Block Elements */
+
+.modal {
+  max-width: 50vw;
+}
+
+.modal-button {
+  background-color: var(--lightblue);
+  border: 2px solid white;
+  color: white;
+  font-size: large;
+}
 
 .mono {
   font-family: "Jetbrains Mono Bold";
@@ -389,3 +405,9 @@
 }
 
 /* Application Specific Elements */
+
+.modal-open {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  transform: scale(1.003);
+}

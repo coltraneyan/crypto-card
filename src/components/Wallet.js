@@ -32,10 +32,10 @@ const Wallet = (props) => {
           </div>
         </div>
         <div
-          className="margin-top-2 border-round-s responsive-size pad-05 info-input"
+          className="margin-top-2 border-round-s responsive-size pad-1 info-input font-color-white wide-font font-size-s"
           onClick={() => exportComponentAsJPEG(walletRef)}
         >
-          SAVE
+          Download Wallet
         </div>
       </div>
     );
