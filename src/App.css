@@ -36,6 +36,7 @@
 .flex-row-align {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-column {
@@ -154,6 +155,9 @@
 
 .font-color-white {
   color: white;
+}
+.word-wrap {
+  word-wrap: break-word;
 }
 
 /* border tokens */
@@ -410,4 +414,16 @@
   filter: blur(1px);
   -webkit-filter: blur(1px);
   transform: scale(1.003);
+}
+
+@media screen and (max-width: 800px) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-center-div-h {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

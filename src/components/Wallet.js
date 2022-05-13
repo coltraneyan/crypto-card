@@ -36,7 +36,7 @@ const Wallet = (props) => {
           </div>
         </div>
         <div
-          className="margin-top-2 border-round-s responsive-size pad-1 info-input font-color-white wide-font font-size-s"
+          className="margin-2 border-round-s responsive-size pad-1 info-input font-color-white wide-font font-size-s"
           onClick={() =>
             exportComponentAsJPEG(walletRef, {
               html2CanvasOptions: {
@@ -53,7 +53,7 @@ const Wallet = (props) => {
   } else {
     return (
       <div>
-        <div className="div-center-h margin-top-2 pad-2 border-color-augment bg-dark-grey border-round-s responsive-size mono-font-bold font-color-white">
+        <div className="div-center-h margin-2 pad-2 border-color-augment bg-dark-grey border-round-s responsive-size mono-font-bold font-color-white">
           <div>Enter a public key in order to generate your Portal Wallet.</div>
         </div>
       </div>

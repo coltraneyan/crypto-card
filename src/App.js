@@ -58,7 +58,7 @@ class App extends React.Component {
           <Header />
           <About updateModal={this.updateModal} />
         </div>
-        <div className="flex-row">
+        <div className="flex-row mobile">
           <div className="bg-dark-grey flex-column fill-height">
             <Form
               updateName={this.updateName}
