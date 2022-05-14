@@ -10,15 +10,15 @@ const Wallet = (props) => {
     return (
       <div className="flex-column-align">
         <div ref={walletRef} className="div-center-h margin-top-2 pad-2">
-          <div className={`card-basic div-center-h ${props.style}`}>
-            <div className="card-top flex-row-align disperse">
-              <div className="flex-column card-info">
+          <div className={`div-center-h | card-basic ${props.style}`}>
+            <div className="flex-row-align disperse | card-top ">
+              <div className="flex-column | card-info">
                 <div>{props.name}</div>
                 <div>{props.blockchain}</div>
               </div>
-              <div className="flex-column-align wide-font card-logo">
+              <div className="flex-column-align | wide-font | card-logo">
                 <div>Portal</div>
-                <div className="mono-font font-size-s border-round-xs border-thick pad-025">
+                <div className="pad-025 | mono-font font-size-s border-round-xs border-thick">
                   wallet
                 </div>
               </div>
@@ -36,7 +36,7 @@ const Wallet = (props) => {
           </div>
         </div>
         <div
-          className="margin-2 border-round-s responsive-size pad-1 info-input font-color-white wide-font font-size-s"
+          className="margin-2 pad-1 | border-round-s wide-font font-color-white font-size-s | responsive-size info-input"
           onClick={() =>
             exportComponentAsJPEG(walletRef, {
               html2CanvasOptions: {
@@ -53,7 +53,10 @@ const Wallet = (props) => {
   } else {
     return (
       <div>
-        <div className="div-center-h margin-2 pad-2 border-color-augment bg-dark-grey border-round-s responsive-size mono-font-bold font-color-white">
+        <div
+          className="margin-top-2 margin-bottom-2 div-center-h pad-2 | 
+        bg-dark-grey border-round-s border-color-augment mono-font-bold font-color-white text-center responsive-size"
+        >
           <div>Enter a public key in order to generate your Portal Wallet.</div>
         </div>
       </div>

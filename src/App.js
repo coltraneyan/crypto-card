@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { createRef } from "react";
+import React from "react";
 import About from "./components/About";
 import Header from "./components/Header";
 import Form from "./components/Form";
@@ -53,13 +53,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={`flex-column ${this.state.modal}`}>
-        <div className="flex-row-align disperse pad-2 | wide-font bg-block-primary no-select">
+      <div className={`flex-column fill-height | ${this.state.modal}`}>
+        <div className="flex-row-align disperse pad-2 | wide-font bg-blue no-select">
           <Header />
           <About updateModal={this.updateModal} />
         </div>
-        <div className="flex-row mobile">
-          <div className="bg-dark-grey flex-column fill-height">
+        <div className="flex-row fill-space | mobile ">
+          <div className="flex-column | bg-dark-grey ">
             <Form
               updateName={this.updateName}
               updateBlockchain={this.updateBlockchain}
@@ -67,7 +67,7 @@ class App extends React.Component {
             />
             <Style updateStyle={this.updateStyle} style={this.state.style} />
           </div>
-          <div className="bg-dark fill-width">
+          <div className="fill-space | bg-light-grey ">
             <Wallet
               name={this.state.name}
               blockchain={this.state.blockchain}

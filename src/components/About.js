@@ -15,27 +15,22 @@ const About = (props) => (
     }}
   >
     {(close) => (
-      <div className="bg-block-primary border-round-s font-color-white pad-2 border-color-augment modal text-center">
+      <div className="pad-2 | bg-dark-grey border-round-s border-color-augment font-color-white font-size-s | modal">
         <div className="flex-row-align disperse">
-          <div className="wide-font"> About </div>
+          <div className="mono-font-bold"> Welcome to Portal Wallet. </div>
           <button
-            className="remove-styling border-round-s modal-button"
+            className="remove-styling border-round-s | modal-button"
             onClick={close}
           >
             &times;
           </button>
         </div>
-        <div className="mono-font pad-2">
-          Welcome to Portal Wallet!
+        <div className="pad-2 | mono-font-bold ">
+          - We use public crypto wallet keys to generate a "WYSIWYG" info card
+          to display your address and recieve payments.
           <br></br>
-          <br></br>
-          Using the public key attached to your cryptocurrency wallet, Portal
-          Wallet will generate a "WYSIWYG" info card to display your address and
-          recieve payments.
-          <br></br>
-          <br></br>
-          We do not store or view any of your information. Once the session is
-          closed, any inputs entered will be removed.
+          <br></br>- We do not store or view any of your information. Once the
+          session is closed, any inputs entered will be removed.
         </div>
       </div>
     )}
