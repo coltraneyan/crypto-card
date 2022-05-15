@@ -341,7 +341,7 @@
   justify-content: center;
   padding: 0.35rem;
   border-radius: 10px;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   background-color: whitesmoke;
 }
 
@@ -407,7 +407,8 @@
 .modal-open {
   filter: blur(1px);
   -webkit-filter: blur(1px);
-  transform: scale(1.003);
+  opacity: 0.95;
+  transform: scale(1.002);
 }
 
 @media screen and (max-width: 800px) {
