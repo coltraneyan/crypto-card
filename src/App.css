@@ -405,10 +405,8 @@
 /* Application Specific Elements */
 
 .modal-open {
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
-  opacity: 0.95;
-  transform: scale(1.002);
+  filter: brightness(55%);
+  -webkit-filter: brightness(55%);
 }
 
 @media screen and (max-width: 800px) {
