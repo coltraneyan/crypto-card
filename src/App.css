@@ -23,6 +23,10 @@
   --color-bg: #e0e0e0;
 }
 
+body {
+  margin: 0;
+}
+
 /* Compositional Elements */
 .flex-row {
   display: flex;
