@@ -1,8 +1,8 @@
 {
-  "name": "reptile",
+  "homepage": "https://coltraneyan.github.io/portal-wallet",
+  "name": "portal-wallet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://coltraneyan.github.io",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "cra-template": "1.1.3",
