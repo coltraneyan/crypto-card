@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portal-wallet/static/css/main.0941693b.css",
+    "main.js": "/portal-wallet/static/js/main.e1541b25.js",
+    "static/media/simon-lee-XX5RQgTuD8o-unsplash.jpeg": "/portal-wallet/static/media/simon-lee-XX5RQgTuD8o-unsplash.e4440769c24d26f749b7.jpeg",
+    "static/media/milad-fakurian-nY14Fs8pxT8-unsplash.jpeg": "/portal-wallet/static/media/milad-fakurian-nY14Fs8pxT8-unsplash.9852ba40935e6eb649d7.jpeg",
+    "static/media/JetBrainsMono[wght].ttf": "/portal-wallet/static/media/JetBrainsMono[wght].56bec5c5d8dcfc0d3e24.ttf",
+    "static/media/JetBrainsMono-Bold.ttf": "/portal-wallet/static/media/JetBrainsMono-Bold.a490f58c0f460cdc1a8d.ttf",
+    "static/media/ttf": "/portal-wallet/static/media/7e389c5e310dc537b083e0e25ea6eab5.fb5cedf30c5ca31043e7.ttf",
+    "index.html": "/portal-wallet/index.html",
+    "main.0941693b.css.map": "/portal-wallet/static/css/main.0941693b.css.map",
+    "main.e1541b25.js.map": "/portal-wallet/static/js/main.e1541b25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0941693b.css",
+    "static/js/main.e1541b25.js"
+  ]
+}
