@@ -55,7 +55,7 @@ const Wallet = (props) => {
       <div>
         <div
           className="margin-top-2 margin-bottom-2 div-center-h pad-2 | 
-        bg-dark-grey border-round-s border-color-augment mono-font-bold font-color-white text-center responsive-size"
+        bg-dark-grey border-round-s border-color-augment mono-font-bold font-color-white text-center responsive-size | mobile-margin"
         >
           <div>Enter a public key in order to generate your Portal Wallet.</div>
         </div>

@@ -414,6 +414,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  html {
+    font-size: 75%;
+  }
+
   .mobile {
     display: flex;
     flex-direction: column;
@@ -422,5 +426,14 @@ body {
   .mobile-center-div-h {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .mobile-margin {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .modal {
+    max-width: 75vw;
   }
 }

@@ -5,7 +5,7 @@ class Style extends React.Component {
     return (
       <div
         className="flex-row-align gap-05 pad-05 margin-2 | bg-blue wide-font font-size-s border-round-xs
-        border-color-augment responsive-size no-select | mobile-center-div-h"
+        border-color-augment responsive-size no-select | mobile mobile-center-div-h"
       >
         <div
           onClick={() => {
