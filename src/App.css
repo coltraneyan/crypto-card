@@ -436,4 +436,10 @@ body {
   .modal {
     max-width: 75vw;
   }
+  .neomorphic {
+    overflow: hidden;
+  }
+  .neomorphic .card-QR-wrapper {
+    box-shadow: none;
+  }
 }
